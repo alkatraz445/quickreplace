@@ -65,7 +65,7 @@ fn main() {
             std::process::exit(1);
         }
     };
-    match fs::write(&args.output, &replaced_data) {
+    match fs::write(&args.output, replaced_data) {
         Ok(_) => {}
         Err(e) => {
             eprintln!(
